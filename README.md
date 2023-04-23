@@ -1,38 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web Development Final Project - *Name of App Here*
 
-## Getting Started
+Submitted by: **Your Name Here**
 
-First, run the development server:
+This web app: **insert description**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Time spent: **X** hours spent in total
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Required Features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+The following **required** functionality is completed:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [ ] **A create form that allows the user to create posts**
+- [ ] **Posts have a title and optionally additional textual content and/or an image added as an external image URL**
+- [ ] **A home feed displaying previously created posts**
+- [ ] **By default, the time created , title, and number of upvotes for each post is shown on the feed**
+- [ ] **Clicking on a post shall direct the user to a new page for the selected post**
+- [ ] **Users can sort posts by either their created time or upvotes count**
+- [ ] **Users can search for posts by title**
+- [ ] **A separate post page for each created post, where any additional information is shown is linked whenever a user clicks a post**
+- [ ] **Users can leave comments underneath a post on the post's separate page**
+- [ ] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
+- [ ] **A previously created post can be edited or deleted from its post page**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The following **optional** features are implemented:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [ ] Users can only edit and deleted posts or delete comments by entering the secret key, which is set by the user during post creation
+- [ ] Upon launching the web app, the user is assigned a random user ID. It will be associated with all posts and comments that they make and displayed on them.
+- [ ] Users can repost a previous post by referencing its post ID. On the post page of the new post, the referenced post is displayed and linked, creating a thread
+- [ ] Users can customize the interface of the web app
+- [ ] Users can share and view web videos
+- [ ] Users can set flags while creating a post. Then users can filter posts by flags on the home feed.
+- [ ] Users can upload images directly from their local machine as an image file
+- [ ] Display a loading animation whenever data is being fetched
 
-## Learn More
+The following **additional** features are implemented:
 
-To learn more about Next.js, take a look at the following resources:
+* [ ] List anything else that you added to improve the site's functionality!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Video Walkthrough
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Here's a walkthrough of implemented user stories:
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Describe any challenges encountered while building the app.
+
+## License
+
+    Copyright [2023] [Amanda Coleman]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
