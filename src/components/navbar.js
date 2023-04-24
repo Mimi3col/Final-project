@@ -9,6 +9,10 @@ export default function NavBar() {
         className="rounded-lg text-white bg-gray-500 hover:bg-blue-500 p-2">
         Home Feed
       </Link>
+      <Link href='/create_character'
+        className="rounded-lg text-white bg-gray-500 hover:bg-blue-500 p-2">
+        Create Caracter
+      </Link>
     </div>
   )
 }

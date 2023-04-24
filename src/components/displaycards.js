@@ -16,11 +16,6 @@ export default function DisplayCards({ char_list }) {
         <p> Charisma: {element.charisma}</p>
         <p> Time Created: {element.created_at.slice(0, 19)}</p>
         <p> 🖤: {element.hearts}</p>
-        <div className=" self-start ">
-          <button className=" w bg-green-500 text-white hover:bg-sky-500">
-            🖤
-          </button>
-        </div>
       </button>
     </div>
   ));

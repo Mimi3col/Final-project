@@ -1,10 +1,10 @@
-# Web Development Final Project - *Name of App Here*
+# Web Development Final Project - *DnD-Share*
 
-Submitted by: **Your Name Here**
+Submitted by: **Amanda Coleman**
 
-This web app: **insert description**
+This web app: **A place to share the atrabutes of your DnD character**
 
-Time spent: **X** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
@@ -45,6 +45,10 @@ Here's a walkthrough of implemented user stories:
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+- Using Next js, for the app creation has taken some getting used to, but I find it an easier setup to use then the traditional react.
+- there is some chalanges getting my inputs to pass on to the supabase backend. 
+
 
 ## License
 

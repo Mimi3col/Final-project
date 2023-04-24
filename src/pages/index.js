@@ -48,7 +48,9 @@ export default function Home() {
         <DisplayCards char_list={charInfo} />
 
       </div>
-      <Card />
+      <Link href="./create_character">
+        Create Character
+      </Link>
     </div>
   )
 }
