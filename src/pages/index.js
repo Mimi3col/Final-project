@@ -43,14 +43,10 @@ export default function Home() {
 
   return (
     <div className='text-center  items-center '>
-      <p>hello world</p>
       <div className=' self-center'>
         <DisplayCards char_list={charInfo} />
 
       </div>
-      <Link href="./create_character">
-        Create Character
-      </Link>
     </div>
   )
 }

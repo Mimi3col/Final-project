@@ -24,8 +24,7 @@ export default function Create_Character() {
 
   const handleChange = (e) => {
     setcharacterData({ ...characterData, [e.target.name]: e.target.value });
-    console.log(e.target.name);
-    console.log(e.target.value);
+
   };
 
   const createCharacter = async () => {
@@ -35,7 +34,7 @@ export default function Create_Character() {
         .from('character_list')
         .insert(
           {
-            char_name: characterData.char_name,
+            char_name,
             race,
             strength,
             dexterity,
@@ -43,7 +42,7 @@ export default function Create_Character() {
             intelligence,
             wisdom,
             charisma,
-          },
+          }
         )
         .single()
       if (error) throw error;
@@ -60,21 +59,21 @@ export default function Create_Character() {
 
   return (
     <div className="items-center text-center">
-      <div className=" ml-96 mr-96 align-text-top ">
+      <div className=" ml-32 mr-32 align-text-top ">
         <p className="text-2xl">Create your Character</p>
         <p>Finding Attributes: </p>
         Take six, six-sided die and roll them. Take the sum of the top 3 values of the six rolled die. Then assign this value to any attribute you want
       </div>
-      <input type='text' text='char_name' value={char_name} onChange={handleChange} placeholder="enter Name of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
-      <input type='text' text='race' value={race} onChange={handleChange} placeholder="enter Race of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
-      <input type='text' text='strength' value={strength} onChange={handleChange} placeholder="enter strength of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
-      <input type='text' text='dexterity' value={dexterity} onChange={handleChange} placeholder="enter dexterity of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
-      <input type='text' text='constitution' value={constitution} onChange={handleChange} placeholder="enter constitution of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
-      <input type='text' text='intelligence' value={intelligence} onChange={handleChange} placeholder="enter intelligence of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
-      <input type='text' text='wisdom' value={wisdom} onChange={handleChange} placeholder="enter wisdom of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
-      <input type='text' text='charisma' value={charisma} onChange={handleChange} placeholder="enter charisma of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
+      <input type='text' text='char_name' value={char_name} onChange={(e) => setcharacterData({ ...characterData, char_name: e.target.value })} placeholder="enter Name of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
+      <input type='text' text='race' value={race} onChange={(e) => setcharacterData({ ...characterData, race: e.target.value })} placeholder="enter Race of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
+      <input type='text' text='strength' value={strength} onChange={(e) => setcharacterData({ ...characterData, strength: e.target.value })} placeholder="enter strength of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
+      <input type='text' text='dexterity' value={dexterity} onChange={(e) => setcharacterData({ ...characterData, dexterity: e.target.value })} placeholder="enter dexterity of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
+      <input type='text' text='constitution' value={constitution} onChange={(e) => setcharacterData({ ...characterData, constitution: e.target.value })} placeholder="enter constitution of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
+      <input type='text' text='intelligence' value={intelligence} onChange={(e) => setcharacterData({ ...characterData, intelligence: e.target.value })} placeholder="enter intelligence of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
+      <input type='text' text='wisdom' value={wisdom} onChange={(e) => setcharacterData({ ...characterData, wisdom: e.target.value })} placeholder="enter wisdom of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
+      <input type='text' text='charisma' value={charisma} onChange={(e) => setcharacterData({ ...characterData, charisma: e.target.value })} placeholder="enter charisma of character" className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 " ></input>
 
-      <button className="rounded-md bg-gray-500 hover:bg-blue-500 text-white" onClick={createCharacter}>
+      <button className="rounded-md bg-gray-500 hover:bg-blue-500 text-white p-3" onClick={createCharacter}>
         Create  Character
       </button>
     </div>
