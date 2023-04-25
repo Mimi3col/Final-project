@@ -1,11 +1,11 @@
+import { useState } from "react"
+import { supabase } from "../../utils/supabase"
+import Router, { useRouter } from "next/router"
+import ExtraInfoSingle from "@/pages/extraInfoSingle";
 
 export default function Card(element) {
 
-  const addHeart = () => {
 
-
-
-  }
 
   return (
     <div className="flex flex-col">
@@ -19,9 +19,9 @@ export default function Card(element) {
         <p> Wisdom: {element.wisdom}</p>
         <p> Charisma: {element.charisma}</p>
         <p> Time Created: {element.created_at.slice(0, 19)}</p>
-        <p> 🖤: {element.hearts}</p>
+        <p> 🖤: {element.heart_ammount}</p>
       </button>
-      <div className=" flex flex-row justify-center gap-5" u>
+      <div className=" flex flex-row justify-center gap-5">
         <button className="rounded-md bg-yellow-400 hover:bg-green-500 w-full ">
           🖤
         </button>

@@ -1,10 +1,7 @@
 // home feed and base page layout 
 
-import Head from "next/head";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { supabase } from "/utils/supabase";
-import Card from "@/components/card";
 import DisplayCards from "@/components/displaycards";
 
 export default function Home() {

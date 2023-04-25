@@ -22,15 +22,11 @@ export default function Create_Character() {
 
   const { char_name, race, strength, dexterity, constitution, intelligence, wisdom, charisma } = characterData;
 
-  const handleChange = (e) => {
-    setcharacterData({ ...characterData, [e.target.name]: e.target.value });
-
-  };
 
   const createCharacter = async () => {
     try {
 
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('character_list')
         .insert(
           {
@@ -58,7 +54,7 @@ export default function Create_Character() {
 
 
   return (
-    <div className="items-center text-center">
+    <div className="items-center text-center flex flex-col justify-center">
       <div className=" ml-32 mr-32 align-text-top ">
         <p className="text-2xl">Create your Character</p>
         <p>Finding Attributes: </p>
