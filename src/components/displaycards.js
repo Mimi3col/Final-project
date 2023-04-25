@@ -17,11 +17,7 @@ export default function DisplayCards({ char_list }) {
         id={element.id}
         character_data={element}
       />
-      <Link href={{
-        pathname: '/extraInfoSingle',
-        query: { element: element },
-      }}>
-        TO Extra Info</Link>
+
     </div>
   ));
 

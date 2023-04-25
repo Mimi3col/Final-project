@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { supabase } from "../../utils/supabase"
 import Router, { useRouter } from "next/router"
-import ExtraInfoSingle from "@/pages/extraInfoSingle";
 
 export default function Card(element) {
 
@@ -9,7 +8,10 @@ export default function Card(element) {
 
   return (
     <div className="flex flex-col">
-      <button className="rounded-lg bg-gray-800 text-white hover:bg-blue-600">
+      <button className="rounded-lg bg-gray-800 text-white hover:bg-blue-600"
+        onClick={() => {
+          Router.push('/displayCharacter', undefined, { name: element.char_name, id: element.id })
+        }}>
         <p> Name: {element.char_name}</p>
         <p> Race: {element.race}</p>
         <p> Strength: {element.strenght}</p>
