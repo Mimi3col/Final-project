@@ -10,7 +10,10 @@ export default function Card(element) {
     <div className="flex flex-col">
       <button className="rounded-lg bg-gray-800 text-white hover:bg-blue-600"
         onClick={() => {
-          Router.push('/displayCharacter', undefined, { name: element.char_name, id: element.id })
+          Router.push({
+            pathname: '/displayCharacter',
+            query: { name: element.char_name },
+          })
         }}>
         <p> Name: {element.char_name}</p>
         <p> Race: {element.race}</p>

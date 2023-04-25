@@ -4,7 +4,7 @@ Submitted by: **Amanda Coleman**
 
 This web app: **A place to share the atrabutes of your DnD character**
 
-Time spent: **10** hours spent in total
+Time spent: **10+** hours spent in total
 
 ## Required Features
 
@@ -15,10 +15,12 @@ The following **required** functionality is completed:
 - [x] **A home feed displaying previously created posts**
 - [x] **By default, the time created , title, and number of upvotes for each post is shown on the feed**
         - Currently you will see the all information entered by the user. 
-- [ ] **Clicking on a post shall direct the user to a new page for the selected post**
+- [x] **Clicking on a post shall direct the user to a new page for the selected post**
+        - does not show the conents of the post but does re-direct to new page specific to that post. 
 - [ ] **Users can sort posts by either their created time or upvotes count**
 - [ ] **Users can search for posts by title**
-- [ ] **A separate post page for each created post, where any additional information is shown is linked whenever a user clicks a post**
+- [/] **A separate post page for each created post, where any additional information is shown is linked whenever a user clicks a post**
+        - there is a separate page but the content is currently blank, the page is specific to each character that has been created
 - [ ] **Users can leave comments underneath a post on the post's separate page**
 - [ ] **Each post should have an upvote button on the post's page. Each click increases its upvotes count by one and users can upvote any number of times**
 - [ ] **A previously created post can be edited or deleted from its post page**
@@ -42,13 +44,25 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+![First Video](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGQ3NDhjNjYwYmI3Y2ZkZGJkNjNiZjBiNDEwMDZhYTk2OTI0ZDMwOSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/fU28W0lN1c9UWXzBIU/giphy.gif)
+
+![Second Video](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTU2MzYxYTBlNmM0YmFjMGE1NzI0M2EyMzQyYWFhZDliNjBiYzNkMyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/BHPXvbXf3gZdA9IboW/giphy.gif)
+
 
 ## Notes
 
 Describe any challenges encountered while building the app.
 
 - Using Next js, for the app creation has taken some getting used to, but I find it an easier setup to use then the traditional react.
-- there is some chalanges getting my inputs to pass on to the supabase backend. 
+- there is some chalanges getting my inputs to pass on to the supabase backend.
+- currently working on getting the selection page to show the specific post. 
+
+
+- Before Demo
+    - Finish up the Re-direction page, to show the information from Supabase
+    - have a comment function on that page
+    - delete the post and re-direct the user back to main page
+
 
 
 ## License
