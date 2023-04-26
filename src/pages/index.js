@@ -9,6 +9,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
 
+
   useEffect(() => {
     fetchCharInfo();
 
@@ -40,6 +41,7 @@ export default function Home() {
 
   return (
     <div className='text-center  items-center '>
+
       <div className=' self-center'>
         <DisplayCards char_list={charInfo} />
 

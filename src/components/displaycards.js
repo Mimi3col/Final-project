@@ -1,30 +1,17 @@
-import Card from "./card";
-import Link from "next/link"
+import Card from './card';
+import Link from 'next/link';
+import Character_Card from './character_card';
 export default function DisplayCards({ char_list }) {
-
-
   const cardsList = char_list.map((element) => (
     <div key={element.id}>
-
-      <Card char_name={element.char_name}
-        race={element.race} strenght={element.strength}
-        dexterity={element.dexterity}
-        constitution={element.constitution}
-        wisdom={element.wisdom}
-        charisma={element.charisma}
-        created_at={element.created_at}
-        heart_ammount={element.heart_ammount}
-        id={element.id}
-        character_data={element}
-      />
-
+      <Character_Card character={element} />
     </div>
   ));
 
-
   return (
-    <div className=" items-center flex flex-col gap-2 m-4 min-w-96">
-      {cardsList}
+    <div className='grid grid-flow-col'>
+      <div className='w-1/6'></div>
+      <div className=' grid grid-cols-3 gap-5  w-3/5 '>{cardsList}</div>
     </div>
-  )
+  );
 }
